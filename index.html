@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V8 Performance Garage — Automotive Showcase</title>
+  <meta name="description" content="A bespoke luxury automotive portal featuring custom V8 modified trucks.">
+  <link rel="stylesheet" href="styles.css?v=v8-showcase-v1">
+</head>
+<body class="editorial-white-body" data-car-page="gateway" data-default-car="sierra">
+
+  <!-- Editorial White Vehicle Stage (100vh Single-Screen Canvas) -->
+  <main class="lambo-stage-wrapper">
+    <!-- Stage Navigation Arrows (Prev / Next) -->
+    <button class="stage-nav-arrow arrow-prev" id="btnPrevCar" aria-label="Previous Machine" title="Previous Machine">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+        <path d="M15 19l-7-7 7-7"/>
+      </svg>
+    </button>
+    <button class="stage-nav-arrow arrow-next" id="btnNextCar" aria-label="Next Machine" title="Next Machine">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+        <path d="M9 5l7 7-7 7"/>
+      </svg>
+    </button>
+
+    <!-- Center Vehicle Display (The 4 Bespoke Artworks) -->
+    <div class="lambo-vehicle-stage">
+      <!-- 1. Ford Raptor R -->
+      <div class="lambo-vehicle-card active" id="vehicleRaptor" data-car="raptor">
+        <img 
+          src="assets/images/raptor-editorial.webp" 
+          alt="Ford F-150 Raptor R Edition" 
+          class="lambo-truck-img"
+          width="1376" 
+          height="768"
+          loading="eager"
+        >
+      </div>
+
+      <!-- 2. GMC Sierra AT4X -->
+      <div class="lambo-vehicle-card" id="vehicleSierra" data-car="sierra">
+        <img 
+          src="assets/images/sierra-editorial.webp" 
+          alt="GMC Sierra AT4X Edition" 
+          class="lambo-truck-img"
+          width="1376" 
+          height="768"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- 3. RAM 1500 TRX -->
+      <div class="lambo-vehicle-card" id="vehicleRam" data-car="ram">
+        <img 
+          src="assets/images/ram-editorial.webp" 
+          alt="RAM 1500 TRX Edition" 
+          class="lambo-truck-img"
+          width="1376" 
+          height="768"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- 4. Chevrolet Silverado ZR2 -->
+      <div class="lambo-vehicle-card" id="vehicleSilverado" data-car="silverado">
+        <img 
+          src="assets/images/silverado-editorial.webp" 
+          alt="Chevrolet Silverado ZR2 Edition" 
+          class="lambo-truck-img"
+          width="1376" 
+          height="768"
+          loading="lazy"
+        >
+      </div>
+    </div>
+
+    <!-- Bottom Docked Spec Card (Segmented Design with Hairline Dividers) -->
+    <div class="lambo-dock-container">
+      <div class="lambo-dock-card">
+        <!-- Col 1: Brand & Model Designation with Brand Logo Icon -->
+        <div class="dock-col dock-brand-col">
+          <div class="dock-brand-icon-wrap">
+            <img src="assets/icons/dock-ford-pink.png" alt="Ford" id="dockBrandIcon" class="dock-brand-icon" loading="eager">
+          </div>
+          <div class="dock-brand-meta">
+            <span class="dock-brand-name" id="dockBrand">FORD PERFORMANCE</span>
+            <span class="dock-model-name" id="dockModel">F-150 RAPTOR R</span>
+          </div>
+        </div>
+
+        <!-- Col 2: High-Performance Benchmark Specs -->
+        <div class="dock-col dock-specs-col">
+          <div class="dock-spec-item">
+            <span class="dock-spec-label">max speed</span>
+            <span class="dock-spec-val"><span id="dockSpeed">195</span> <span class="dock-unit">km/h</span></span>
+          </div>
+          <div class="dock-divider-v" aria-hidden="true"></div>
+          <div class="dock-spec-item">
+            <span class="dock-spec-label">0-100 km/h</span>
+            <span class="dock-spec-val"><span id="dockAccel">3.8</span> <span class="dock-unit">s</span></span>
+          </div>
+          <div class="dock-divider-v" aria-hidden="true"></div>
+          <div class="dock-spec-item">
+            <span class="dock-spec-label">HP</span>
+            <span class="dock-spec-val" id="dockHp">720</span>
+          </div>
+        </div>
+
+        <!-- Col 3: Plus Action CTA (Enters the Showroom) -->
+        <div class="dock-col dock-action-col">
+          <a href="sierra.html" class="dock-plus-btn" id="dockEnterLink" title="Enter Showroom" aria-label="Enter Showroom">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js?v=v8-showcase-v1"></script>
+</body>
+</html>
